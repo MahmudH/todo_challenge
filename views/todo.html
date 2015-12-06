@@ -1,2 +1,25 @@
-<h4>Todo App</h4>
-{{ name }}
+<div class='row'>
+  <div class='col-md-6 col-md-offset-3'>
+    <h4>Todo List:</h4>
+    <form ng-submit='addTask()'>
+      <div class='form-group'>
+        <input type="text" ng-model='newTask'
+               class='form-control' />
+      </div>
+      <input type='submit' class='btn
+      btn-primary' value='Add Task'>
+    </form>
+  </div>
+</div>
+<hr/>
+<div ng-repeat='task in taskList'>
+  <div class='row'>
+    <div class='col-md-12'>
+      <div class='description'>
+        <input type="checkbox" ng-model='task.done'/>
+        {{ task.description }}
+      </div>
+    </div>
+  </div>
+</div>
+<hr/>
