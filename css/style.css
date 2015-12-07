@@ -1,2 +1,19 @@
-body {
+.strike {
+  text-decoration: line-through;
+}
+
+.description {
+  font-size: 1.6em;
+}
+
+.checkboxTask{
+  position: relative;
+  right: 20px;
+}
+
+.delete-button{
+}
+
+.td-desc{
+  width: 220px;
 }

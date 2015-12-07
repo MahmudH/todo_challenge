@@ -15,11 +15,21 @@
 <div ng-repeat='task in taskList'>
   <div class='row'>
     <div class='col-md-12'>
-      <div class='description'>
-        <input type="checkbox" ng-model='task.done'/>
-        {{ task.description }}
-      </div>
+      <table class='table'>
+        <td class='td-desc'>
+          <div class='description' ng-class='{ strike: task.done }'>
+            <input type="checkbox" class='checkboxTask' ng-model='task.done'/>
+            {{ task.description }}
+          </div>
+        </td>
+        <td>
+          <button class='btn btn-danger delete-button' ng-click='deleteTask($index)'>Delete</button>
+        </td>
+      </table>
     </div>
   </div>
+  <hr/>
 </div>
-<hr/>
+<div class='pending'>
+  {{ pendingCount }} left in your todo list.
+</div>
